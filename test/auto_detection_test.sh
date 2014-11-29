@@ -16,6 +16,13 @@ function test_package_manager_with_yum()
 	assertEquals "did not detect yum" "yum" "$package_manager" 
 }
 
+function test_package_manager_with_pkg()
+{
+	command -v pkg >/dev/null || return
+	
+	assertEquals "did not detect pkg" "pkg" "$package_manager" 
+}
+
 function test_package_manager_with_macports()
 {
 	command -v port >/dev/null || return

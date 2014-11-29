@@ -17,6 +17,7 @@ make_opts=()
 #
 if   command -v apt-get >/dev/null; then package_manager="apt"
 elif command -v yum     >/dev/null; then package_manager="yum"
+elif command -v pkg     >/dev/null; then package_manager="pkg"
 elif command -v port    >/dev/null; then package_manager="port"
 elif command -v brew    >/dev/null; then package_manager="brew"
 elif command -v pacman  >/dev/null; then package_manager="pacman"
@@ -103,7 +104,8 @@ function install_packages()
 	case "$package_manager" in
 		apt)	$sudo apt-get install -y $* || return $? ;;
 		yum)	$sudo yum install -y $* || return $?     ;;
-		port)   $sudo port install $* || return $?       ;;
+		pkg)	$sudo pkg install -y $* || return $?     ;;
+		port)	$sudo port install $* || return $?       ;;
 		brew)
 			local brew_owner="$(/usr/bin/stat -f %Su "$(command -v brew)")"
 			sudo -u "$brew_owner" brew install $* ||

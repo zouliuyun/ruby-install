@@ -23,6 +23,7 @@ Installs [Ruby], [JRuby], [Rubinius], [MagLev] or [mruby].
   * [pacman]
   * [macports]
   * [brew]
+  * [pkg]
 * Has tests.
 
 ## Anti-Features
@@ -181,6 +182,7 @@ of [rbenv]
 [pacman]: https://wiki.archlinux.org/index.php/Pacman
 [macports]: https://www.macports.org/
 [brew]: http://brew.sh
+[pkg]: https://wiki.freebsd.org/pkgng
 
 [bash]: http://www.gnu.org/software/bash/
 [wget]: http://www.gnu.org/software/wget/
