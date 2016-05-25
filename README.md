@@ -1,5 +1,6 @@
 # ruby-install
-
+*笔记：make install 使用时候一直报download失败，直接在util.sh 中的wget命令后面加上--no-check-certificate
+*
 [![Build Status](https://travis-ci.org/postmodern/ruby-install.svg?branch=master)](https://travis-ci.org/postmodern/ruby-install)
 
 Installs [Ruby], [JRuby], [Rubinius], [MagLev] or [mruby].
